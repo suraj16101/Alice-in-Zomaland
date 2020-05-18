@@ -62,6 +62,20 @@ new google.maps.LatLng(28.600717, 77.227786),
 new google.maps.LatLng(28.529527, 77.219425),
 new google.maps.LatLng(28.528454, 77.218066),
 new google.maps.LatLng(28.527927, 77.218862),
+];
+
+var pointArray = new google.maps.MVCArray(heatmap_points);
+var heatmap;
+heatmap = new google.maps.visualization.HeatmapLayer({
+
+data: pointArray
+});
+heatmap.setMap(map);
+heatmap.set('threshold', 10);
+heatmap.set('radius', 10);
+heatmap.set('opacity', 0.600000);
+heatmap.set('dissipating', true);
+var heatmap_points = [
 new google.maps.LatLng(28.523483, 77.207512),
 new google.maps.LatLng(28.528694, 77.219579),
 new google.maps.LatLng(28.527436, 77.219375),

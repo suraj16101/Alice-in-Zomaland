@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(28.630427, 77.081986);
+		var myOptions = {
+			zoom: 12,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+var heatmap_points = [
+new google.maps.LatLng(28.669960, 77.101782),
+new google.maps.LatLng(28.649323, 77.233690),
+new google.maps.LatLng(28.694209, 77.204104),
+new google.maps.LatLng(28.638738, 77.076701),
+new google.maps.LatLng(28.648952, 77.233681),
+new google.maps.LatLng(28.649515, 77.233546),
+new google.maps.LatLng(28.642992, 77.117414),
+new google.maps.LatLng(28.694925, 77.204240),
+new google.maps.LatLng(28.643137, 77.177910),
+new google.maps.LatLng(28.639546, 77.082133),
+new google.maps.LatLng(28.633638, 77.098816),
+new google.maps.LatLng(28.637231, 77.101279),
+new google.maps.LatLng(28.664080, 77.091531),
+new google.maps.LatLng(28.631330, 77.097843),
+new google.maps.LatLng(28.639199, 77.071682),
+new google.maps.LatLng(28.631473, 77.097621),
+new google.maps.LatLng(28.692992, 77.149449),
+new google.maps.LatLng(28.693218, 77.151762),
+new google.maps.LatLng(28.588030, 77.168404),
+new google.maps.LatLng(28.638623, 77.078328),
+new google.maps.LatLng(28.646286, 77.116563),
+new google.maps.LatLng(28.669941, 77.108776),
+new google.maps.LatLng(28.643946, 77.102966),
+new google.maps.LatLng(28.628649, 77.076567),
+new google.maps.LatLng(28.632136, 77.091053),
+new google.maps.LatLng(28.468147, 77.060496),
+new google.maps.LatLng(28.588782, 77.169087),
+new google.maps.LatLng(28.594698, 77.122274),
+new google.maps.LatLng(28.647299, 77.119231),
+new google.maps.LatLng(28.629991, 77.079622),
+new google.maps.LatLng(28.615813, 77.089908),
+new google.maps.LatLng(28.639117, 77.074915),
+new google.maps.LatLng(28.631667, 77.098077),
+new google.maps.LatLng(28.638624, 77.077584),
+new google.maps.LatLng(28.639220, 77.075336),
+new google.maps.LatLng(28.543863, 77.119460),
+new google.maps.LatLng(28.634946, 77.070185),
+new google.maps.LatLng(28.631435, 77.097972),
+new google.maps.LatLng(28.670040, 77.102581),
+new google.maps.LatLng(28.663490, 77.092217),
+new google.maps.LatLng(28.625755, 77.101219),
+new google.maps.LatLng(28.638993, 77.074770),
+new google.maps.LatLng(28.631859, 77.084444),
+new google.maps.LatLng(28.630298, 77.081389),
+new google.maps.LatLng(28.625192, 77.101131),
+new google.maps.LatLng(28.622456, 77.058386),
+new google.maps.LatLng(28.693091, 77.173386),
+new google.maps.LatLng(28.627532, 77.070008),
+new google.maps.LatLng(17.410545, 78.449934),
+new google.maps.LatLng(28.627876, 77.100319),
+new google.maps.LatLng(28.640169, 77.070852),
+new google.maps.LatLng(28.638621, 77.079028),
+new google.maps.LatLng(28.637743, 77.093417),
+new google.maps.LatLng(28.648635, 77.122358),
+new google.maps.LatLng(28.569598, 77.193807),
+new google.maps.LatLng(28.629697, 77.082133),
+new google.maps.LatLng(28.623918, 77.080106),
+new google.maps.LatLng(28.639352, 77.073965),
+new google.maps.LatLng(28.683304, 77.135687),
+new google.maps.LatLng(28.629647, 77.082293),
+new google.maps.LatLng(28.598216, 77.173647),
+new google.maps.LatLng(28.638618, 77.078324),
+new google.maps.LatLng(28.669304, 77.100871),
+new google.maps.LatLng(28.630131, 77.081738),
+];
+
+var pointArray = new google.maps.MVCArray(heatmap_points);
+var heatmap;
+heatmap = new google.maps.visualization.HeatmapLayer({
+
+data: pointArray
+});
+heatmap.setMap(map);
+heatmap.set('threshold', 10);
+heatmap.set('radius', 10);
+heatmap.set('opacity', 0.600000);
+heatmap.set('dissipating', true);
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
